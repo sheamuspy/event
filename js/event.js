@@ -112,14 +112,44 @@ function sendFeedback(event, subscriptionId) {
     if(response.status === 0){
         $("#event-list").empty();
         getEvents();
+        Materialize.toast(response.message, 2000);
     } else {
-        Materialize.toast("Sorry", 2000);
+        Materialize.toast(response.message, 2000);
     }
 
 }
 
 
-function addEvent(){
+$(function () {
+    "use strict";
+    $("#addEvent").click(function () {
+        cordova.plugins.barcodeScanner.scan(
+            function (result) {
+                addEvent(result.text);
+            },
+            function (error) {
+                $("#result").val(error);
+            }
+        );
+    });
+});
+
+function addEvent(eventCode){
+    var userId, URL, response;
+
+    userId = '1'; // sessionStorage.getItem("user_id");
+
+    URL = "http://localhost/mobile_web/Event/php/android_ajax.php?cmd=4&user_id=" + userId + "&event_code=" + eventCode;
+
+    response = sendRequest(URL);
+
+    if(response.status == 0){
+        $("#event-list").empty();
+        getEvents();
+        Materialize.toast(response.message, 2000);
+    } else {
+        Materialize.toast(response.message, 2000);
+    }
 
 }
 
