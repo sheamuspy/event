@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+    <widget xmlns   = "http://www.w3.org/ns/widgets"
+    xmlns:gap   = "http://phonegap.com/ns/1.0"
+    id          = "com.sheamuspy"
+    versionCode = "10"
+    version     = "1.0.0" >
+        <!-- Barcode Scanner plugin -->
+        <gap:plugin name="net.roughshod.plugins.barcodescanner" version="3.0.0" />
+
+        <!-- Whitelist plugin: Enables cross platforms requests -->
+        <gap:plugin name="cordova-plugin-whitelist" source="npm" />
+
+        <allow-navigation href="*" />
+        <allow-intent href="*" />
+        <access origin="*" />
+
+
+        <gap:plugin name="org.apache.cordova.file"/>
+        <preference name="AndroidPersistentFileLocation" value="Internal" />
+
+        <gap:plugin name="cordova-plugin-network-information"/>
+
+    <!-- versionCode is optional and Android only -->
+
+    <name>Event</name>
+
+    <description>
+      A basic app that allows user to register for events and comment on registered events.
+    </description>
+
+    <author href="plus.google.com/+SheamusPunchYebisi" email="sheamuspy@gmail.com">
+      Sheamus Punch Yebisi
+    </author>
+</widget>
