@@ -42,7 +42,7 @@ function getEvents() {
     "use strict";
     var userId, URL, URL2, response, response2, events, feedback, commented, i, j;
 
-    userId = '1';// sessionStorage.getItem("user_id");
+    userId = '1'; // sessionStorage.getItem("user_id");
 
     URL = "http://localhost/mobile_web/Event/php/android_ajax.php?cmd=4&user_id=" + userId;
     URL2 = "http://localhost/mobile_web/Event/php/android_ajax.php?cmd=8&user_id=" + userId;
@@ -82,17 +82,44 @@ function getEvents() {
         if (commented === false) {
             $("#event-list").append("<div class='card-panel'>" +
                 "<div class='input-field'>" +
-                    "<input placeholder='Comment' id='comment' type='text' class='validate'>" +
-                    "<label for='comment'>Comment</label>" +
+                "<input placeholder='Comment' id='commentforevent" + i + "' type='text' class='validate'>" +
+                "<label for='commentforevent" + i + "'>Comment</label>" +
                 "</div>" +
                 "<div class='input-field'>" +
-                    "<input placeholder='Rating' id='rating' type='text' class='validate'>" +
-                    "<label for='rating'>Rating</label>" +
+                "<input placeholder='Rating' id='ratingforevent" + i + "' type='text' class='validate'>" +
+                "<label for='ratingforevent" + i + "'>Rating</label>" +
                 "</div>" +
-                "<a class='waves-effect waves-light btn'>Stuff</a>" +
+                "<a class='waves-effect waves-light btn' onclick='sendFeedback(" + i + ", " + events[i].SUBSCRIPTION_ID + ")'>Stuff</a>" +
                 "</div>");
         }
     }
+
+}
+
+function sendFeedback(event, subscriptionId) {
+    var comment, rating, URL, response;
+    comment = $("#commentforevent" + event).val();
+    rating = $("#ratingforevent" + event).val();
+
+    if (comment === "") {
+        return;
+    }
+
+    URL = "http://localhost/mobile_web/Event/php/android_ajax.php?cmd=5&subscription_id=" + subscriptionId + "&comment='" + comment + "'&rating=" + rating;
+    alert(URL);
+    response = sendRequest(URL);
+
+    if(response.status === 0){
+        $("#event-list").empty();
+        getEvents();
+    } else {
+        Materialize.toast("Sorry", 2000);
+    }
+
+}
+
+
+function addEvent(){
 
 }
 
