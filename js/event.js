@@ -64,19 +64,11 @@ function getEvents() {
 
         commented = false;
 
-        $("#event-list").append("<div class='card'>" +
-            "<div class='card-image waves-effect waves-block waves-light'>" +
-            "<img class='activator' src='../images/user_placeholder.jpg'>" +
-            "<span class='card-title'>" + events[i].EVENT_NAME + "</span>" +
-            "</div>" +
-            "<div class='card-reveal'>" +
-            "<span class='card-title grey-text text-darken-4'>Card Title<i class='fa fa-times'></i></span>" +
-            "<ul>" +
-            "<li>" + events[i].EVENT_NAME + "</li>" +
-            "<li>" + events[i].EVENT_OWNER + "</li>" +
-            "<li>" + events[i].EVENT_DESCRIPTION + "</li>" +
+        $("#event-list").append("<div class='card-panel'>" +
+            "<p>" + events[i].EVENT_NAME + "</p>" +
+            "<p>" + events[i].EVENT_OWNER + "</p>" +
+            "<p>" + events[i].EVENT_DESCRIPTION + "</p>" +
             "</ul>" +
-            "</div>" +
             "</div>");
 
         for (j; j < feedback.length; j = j + 1) {
