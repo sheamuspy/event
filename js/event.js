@@ -109,7 +109,7 @@ function sendFeedback(event, subscriptionId) {
     alert(URL);
     response = sendRequest(URL);
 
-    if(response.status === 0){
+    if (response.status === 0) {
         $("#event-list").empty();
         getEvents();
         Materialize.toast(response.message, 2000);
@@ -120,21 +120,32 @@ function sendFeedback(event, subscriptionId) {
 }
 
 
-$(function () {
-    "use strict";
-    $("#addEvent").click(function () {
-        cordova.plugins.barcodeScanner.scan(
-            function (result) {
-                addEvent(result.text);
-            },
-            function (error) {
-                $("#result").val(error);
-            }
-        );
-    });
-});
+//$(function () {
+//    "use strict";
+//    $("#addEvent").click(function () {
+//        cordova.plugins.barcodeScanner.scan(
+//            function (result) {
+//                addEventH(result.text);
+//            },
+//            function (error) {
+//                $("#result").val(error);
+//            }
+//        );
+//    });
+//});
 
-function addEvent(eventCode){
+function addEvent() {
+    cordova.plugins.barcodeScanner.scan(
+        function (result) {
+            addEventH(result.text);
+        },
+        function (error) {
+            $("#result").val(error);
+        }
+    );
+}
+
+function addEventH(eventCode) {
     var userId, URL, response;
 
     userId = sessionStorage.getItem("userId");
@@ -143,7 +154,7 @@ function addEvent(eventCode){
 
     response = sendRequest(URL);
 
-    if(response.status == 0){
+    if (response.status == 0) {
         $("#event-list").empty();
         getEvents();
         Materialize.toast(response.message, 2000);
