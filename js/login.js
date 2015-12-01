@@ -23,7 +23,7 @@ function login() {
 
     response = sendRequest(url);
 
-    if (response.status === 0 && response.user.length > 0) {
+    if (response.status === 0 && response.user != false) {
         var userId = response.user['USER_ID'];
         var username = response.user['USERNAME'];
         var userFirstname = response.user['USER_FIRSTNAME'];
