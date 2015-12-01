@@ -42,7 +42,7 @@ function getEvents() {
     "use strict";
     var userId, URL, URL2, response, response2, events, feedback, commented, i, j;
 
-    userId = '1'; // sessionStorage.getItem("user_id");
+    userId = sessionStorage.getItem("userId");
 
     URL = "http://localhost/mobile_web/Event/php/android_ajax.php?cmd=4&user_id=" + userId;
     URL2 = "http://localhost/mobile_web/Event/php/android_ajax.php?cmd=8&user_id=" + userId;
@@ -137,7 +137,7 @@ $(function () {
 function addEvent(eventCode){
     var userId, URL, response;
 
-    userId = '1'; // sessionStorage.getItem("user_id");
+    userId = sessionStorage.getItem("userId");
 
     URL = "http://localhost/mobile_web/Event/php/android_ajax.php?cmd=4&user_id=" + userId + "&event_code=" + eventCode;
 
