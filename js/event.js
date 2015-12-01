@@ -4,7 +4,7 @@
 $(document).ready(function () {
     "use strict";
 
-    var userId = sessionStorage.getItem("user_id");
+    var userId = sessionStorage.getItem("userId");
     getEvents();
 
 });
@@ -13,7 +13,7 @@ $(function () {
     "use strict";
     $("#addEventBtn").click(function () {
         var eventOwner, eventName, eventDescription, eventDate, eventTime, eventVenue, URL, response;
-        eventOwner = sessionStorage.getItem("user_id");
+        eventOwner = sessionStorage.getItem("userId");
         eventName = $("#eventName").val();
         eventDescription = $("#eventDescription").val();
         eventDate = $("#eventDate").val();
