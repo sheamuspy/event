@@ -115,7 +115,7 @@ function sendFeedback(event, subscriptionId) {
     comment = $("#commentforevent" + event).val();
     rating = $("#ratingforevent" + event).val();
 
-    if (comment === "") {
+    if (comment === "" || rating === "") {
         return;
     }
 
