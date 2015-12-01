@@ -20,7 +20,7 @@ $(function () {
         eventTime = $("#eventTime").val();
         eventVenue = $("#eventVenue").val();
 
-        URL = "http://localhost/mobile_web/Event/php/android_ajax.php?cmd=1&event_owner=" + eventOwner + "&event_name='" + eventName + "'&event_description='" + eventDescription + "'&event_date='" + eventDate + "'&event_time='" + eventTime + "'&event_venue=" + eventVenue;
+        URL = "http://cs.ashesi.edu.gh/~csashesi/class2016/sheamus-yebisi/mobile_web/Event/php/android_ajax.php?cmd=1&event_owner=" + eventOwner + "&event_name='" + eventName + "'&event_description='" + eventDescription + "'&event_date='" + eventDate + "'&event_time='" + eventTime + "'&event_venue=" + eventVenue;
         response = sendRequest(URL);
 
         if (response.status === 0) {
@@ -44,8 +44,8 @@ function getEvents() {
 
     userId = sessionStorage.getItem("userId");
 
-    URL = "http://localhost/mobile_web/Event/php/android_ajax.php?cmd=4&user_id=" + userId;
-    URL2 = "http://localhost/mobile_web/Event/php/android_ajax.php?cmd=8&user_id=" + userId;
+    URL = "http://cs.ashesi.edu.gh/~csashesi/class2016/sheamus-yebisi/mobile_web/Event/php/android_ajax.php?cmd=4&user_id=" + userId;
+    URL2 = "http://cs.ashesi.edu.gh/~csashesi/class2016/sheamus-yebisi/mobile_web/Event/php/android_ajax.php?cmd=8&user_id=" + userId;
 
     response = sendRequest(URL);
     response2 = sendRequest(URL2);
@@ -105,7 +105,7 @@ function sendFeedback(event, subscriptionId) {
         return;
     }
 
-    URL = "http://localhost/mobile_web/Event/php/android_ajax.php?cmd=5&subscription_id=" + subscriptionId + "&comment='" + comment + "'&rating=" + rating;
+    URL = "http://cs.ashesi.edu.gh/~csashesi/class2016/sheamus-yebisi/mobile_web/Event/php/android_ajax.php?cmd=5&subscription_id=" + subscriptionId + "&comment='" + comment + "'&rating=" + rating;
     alert(URL);
     response = sendRequest(URL);
 
@@ -139,7 +139,7 @@ function addEvent(eventCode){
 
     userId = sessionStorage.getItem("userId");
 
-    URL = "http://localhost/mobile_web/Event/php/android_ajax.php?cmd=4&user_id=" + userId + "&event_code=" + eventCode;
+    URL = "http://cs.ashesi.edu.gh/~csashesi/class2016/sheamus-yebisi/mobile_web/Event/php/android_ajax.php?cmd=4&user_id=" + userId + "&event_code=" + eventCode;
 
     response = sendRequest(URL);
 
