@@ -89,7 +89,7 @@ function getEvents() {
                 "<input placeholder='Rating' id='ratingforevent" + i + "' type='text' class='validate'>" +
                 "<label for='ratingforevent" + i + "'>Rating</label>" +
                 "</div>" +
-                "<a class='waves-effect waves-light btn' onclick='sendFeedback(" + i + ", " + events[i].SUBSCRIPTION_ID + ")'>Stuff</a>" +
+                "<a class='waves-effect waves-light btn-flat' onclick='sendFeedback(" + i + ", " + events[i].SUBSCRIPTION_ID + ")'>Add Comment</a>" +
                 "</div>");
         }
     }
