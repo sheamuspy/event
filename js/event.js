@@ -85,7 +85,8 @@ function getEvents() {
                 "<input placeholder='Comment' id='commentforevent" + i + "' type='text' class='validate'>" +
                 "</div>" +
                 "<div class='input-field'>" +
-                "<input placeholder='Rating' id='ratingforevent" + i + "' type='text' class='validate'>" +
+                "<label for='ratingforevent" + i + "'></label>" +
+                "<p class='range-field'><input type='range' id='ratingforevent" + i + "' min='0' max='100' />  </p>" +
                 "</div>" +
                 "<a class='waves-effect waves-teal btn-flat' onclick='sendFeedback(" + i + ", " + events[i].SUBSCRIPTION_ID + ")'>Add Comment</a>" +
                 "</div>");
