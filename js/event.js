@@ -79,9 +79,15 @@ function getEvents() {
                 commented = true;
             }
             $("#event-list").append("<div class='card-panel'>" +
-                "<td>" + feedback[j].FEEDBACK_COMMENT + "</td>" +
-                "<td>" + feedback[j].EVENT_OWNER + "</td>" +
-                "</tr>" +
+                "<div class='row valign-wrapper'>" +
+                "<div class='col s2'>" +
+                "<img src='../images/user_placeholder.jpg' alt='' class='circle responsive-img'>" +
+                "</div>" +
+                "<div class='col s10'>" +
+                "<p>" + feedback[j].FEEDBACK_COMMENT + "</p>" +
+                "<p>" + feedback[j].FEEDBACK_RATING + "</p>" +
+                "</div>" +
+                "</div>" +
                 "</div>");
         }
 
