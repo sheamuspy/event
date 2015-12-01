@@ -12,9 +12,6 @@
         <nav style="position:fixed">
             <div class="nav-wrapper">
                 <a href="#" class="brand-logo center">Event</a>
-                <ul class="right">
-                    <li><a href="#" id="addEvent" onclick="addEvent()"><i class="fa fa-qrcode"></i></a></li>
-                </ul>
             </div>
         </nav>
     </header>
@@ -22,6 +19,11 @@
     <main>
         <div id="event-list" class="container" style="padding-top:64px">
 
+        </div>
+                <div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
+            <a class="modal-trigger btn-floating btn-large red" onclick="addEvent()">
+                <i class="fa fa-qrcode"></i>
+            </a>
         </div>
     </main>
 
