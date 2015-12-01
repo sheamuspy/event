@@ -83,13 +83,11 @@ function getEvents() {
             $("#event-list").append("<div class='card-panel'>" +
                 "<div class='input-field'>" +
                 "<input placeholder='Comment' id='commentforevent" + i + "' type='text' class='validate'>" +
-                "<label for='commentforevent" + i + "'>Comment</label>" +
                 "</div>" +
                 "<div class='input-field'>" +
                 "<input placeholder='Rating' id='ratingforevent" + i + "' type='text' class='validate'>" +
-                "<label for='ratingforevent" + i + "'>Rating</label>" +
                 "</div>" +
-                "<a class='waves-effect waves-light btn-flat' onclick='sendFeedback(" + i + ", " + events[i].SUBSCRIPTION_ID + ")'>Add Comment</a>" +
+                "<a class='waves-effect waves-teal btn-flat' onclick='sendFeedback(" + i + ", " + events[i].SUBSCRIPTION_ID + ")'>Add Comment</a>" +
                 "</div>");
         }
     }
