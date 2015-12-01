@@ -86,7 +86,7 @@ function getEvents() {
                 "</div>" +
                 "<div class='input-field'>" +
                 "<label for='ratingforevent" + i + "'></label>" +
-                "<p class='range-field'><input type='range' id='ratingforevent" + i + "' min='0' max='100' />  </p>" +
+                "<p class='range-field'><input type='range' id='ratingforevent" + i + "' min='0' max='5' />  </p>" +
                 "</div>" +
                 "<a class='waves-effect waves-teal btn-flat' onclick='sendFeedback(" + i + ", " + events[i].SUBSCRIPTION_ID + ")'>Add Comment</a>" +
                 "</div>");
