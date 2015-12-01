@@ -4,6 +4,12 @@
 $(document).ready(function () {
     "use strict";
 
+
+    $(document).ready(function () {
+        $('select').material_select();
+    });
+
+
     var userId = sessionStorage.getItem("userId");
     getEvents();
 
