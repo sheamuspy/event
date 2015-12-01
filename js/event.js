@@ -1,4 +1,4 @@
-/*global $, jQuery, document, sendRequest, alert, sessionStorage, window, getEvents */
+/*global $, jQuery, document, sendRequest, cordova, alert, sessionStorage, window, getEvents */
 
 
 $(document).ready(function () {
