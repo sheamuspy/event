@@ -163,7 +163,7 @@ function addEventH(eventCode) {
 
     userId = sessionStorage.getItem("userId");
 
-    URL = "http://cs.ashesi.edu.gh/~csashesi/class2016/sheamus-yebisi/mobile_web/Event/php/android_ajax.php?cmd=4&user_id=" + userId + "&event_code=" + eventCode;
+    URL = "http://cs.ashesi.edu.gh/~csashesi/class2016/sheamus-yebisi/mobile_web/Event/php/android_ajax.php?cmd=2&user_id=" + userId + "&event_code='" + eventCode + "'";
 
     response = sendRequest(URL);
 
