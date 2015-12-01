@@ -88,6 +88,7 @@ function getEvents() {
         if (commented === false) {
             $("#event-list").append("<div class='card-panel'>" +
                 "<h4>Feedback</h4>" +
+                "<div class='divider'></div>" +
                 "<div class='input-field'>" +
                 "<input placeholder='Comment' id='commentforevent" + i + "' type='text' class='validate'>" +
                 "<label for='commentforevent" + i + "'>Comment</label>" +
