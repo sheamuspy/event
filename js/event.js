@@ -81,7 +81,7 @@ function getEvents() {
             $("#event-list").append("<div class='card-panel'>" +
                 "<div class='row valign-wrapper'>" +
                 "<div class='col s2'>" +
-                "<img src='../images/user_placeholder.jpg' alt='' class='circle responsive-img'>" +
+                "<i class='fa fa-user'></i>" +
                 "</div>" +
                 "<div class='col s10'>" +
                 "<p>" + feedback[j].FEEDBACK_COMMENT + "</p>" +
