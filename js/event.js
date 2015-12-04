@@ -65,9 +65,11 @@ function getEvents() {
         commented = false;
 
         $("#event-list").append("<div class='card-panel'>" +
-            "<h5 class='purple darken-4'>" + events[i].EVENT_NAME + "</h5>" +
-            "<div><i class='fa fa-map-marker'></i> " + events[i].EVENT_DESCRIPTION + "</div>" +
+            "<h5 class='purple-text text-darken-4'>" + events[i].EVENT_NAME + "</h5>" +
+            "<div>" + events[i].EVENT_DESCRIPTION + "</div>" +
             "<div><i class='fa fa-map-marker'></i> " + events[i].EVENT_VENUE + "</div>" +
+            "<div><i class='fa fa-calendar'></i> " + events[i].EVENT_DATE + "</div>" +
+            "<div><i class='fa fa-clock-o'></i> " + events[i].EVENT_TIME + "</div>" +
             "</div>");
 
         for (j; j < feedback.length; j = j + 1) {
