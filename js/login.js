@@ -1,4 +1,12 @@
 /*global $ */
+
+$(document).ready(function () {
+    "use strict";
+    if (sessionStorage.length != 0) {
+        window.location = "event.html";
+    }
+});
+
 function sendRequest(requestURL) {
     "use strict";
     var obj, response;
