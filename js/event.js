@@ -65,10 +65,9 @@ function getEvents() {
         commented = false;
 
         $("#event-list").append("<div class='card-panel'>" +
-            "<p>" + events[i].EVENT_NAME + "</p>" +
-            "<p>" + events[i].EVENT_OWNER + "</p>" +
-            "<p>" + events[i].EVENT_DESCRIPTION + "</p>" +
-            "</ul>" +
+            "<h5 class='purple darken-4'>" + events[i].EVENT_NAME + "</h5>" +
+            "<div><i class='fa fa-map-marker'></i> " + events[i].EVENT_DESCRIPTION + "</div>" +
+            "<div><i class='fa fa-map-marker'></i> " + events[i].EVENT_VENUE + "</div>" +
             "</div>");
 
         for (j; j < feedback.length; j = j + 1) {
@@ -78,14 +77,15 @@ function getEvents() {
                 commented = true;
             }
             $("#event-list").append("<div class='card-panel'>" +
-                "<p>" + feedback[j].FEEDBACK_COMMENT + "</p>" +
-                "<p>" + feedback[j].FEEDBACK_RATING + "</p>" +
+                "<b>" + feedback[j].USERNAME + "</b>" +
+                "<div>" + feedback[j].FEEDBACK_COMMENT + "</div>" +
+                "<div>" + feedback[j].FEEDBACK_RATING + "</div>" +
                 "</div>");
         }
 
         if (commented === false) {
             $("#event-list").append("<div class='card-panel'>" +
-                "<h4>Feedback</h4>" +
+                "<h5>Feedback</h5>" +
                 "<div class='divider'></div>" +
                 "<div class='input-field'>" +
                 "<input placeholder='Comment' id='commentforevent" + i + "' type='text' class='validate'>" +
