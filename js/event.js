@@ -121,7 +121,7 @@ function sendFeedback(event, subscriptionId) {
     }
 
     URL = "http://cs.ashesi.edu.gh/~csashesi/class2016/sheamus-yebisi/mobile_web/Event/php/android_ajax.php?cmd=5&subscription_id=" + subscriptionId + "&comment='" + comment + "'&rating=" + rating;
-    alert(URL);
+
     response = sendRequest(URL);
 
     if (response.status === 0) {
